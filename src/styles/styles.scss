@@ -1,0 +1,10 @@
+@import './base/reset';
+@import './base/variables';
+@import './base/mixin';
+@import './base/base';
+
+@import './components/correctLetters.scss';
+@import './components/hangmanInfographics.scss';
+@import './components/wrongLetters.scss';
+@import './components/endGameModal.scss';
+@import './components/repeatedKeyAlert.scss';

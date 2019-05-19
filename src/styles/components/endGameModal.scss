@@ -1,0 +1,37 @@
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+    z-index: 999;
+}
+
+.ReactModal__Content.ReactModal__Content--after-open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+        font-size: 9rem;
+        color: $c-white;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+
+        @include respond (md) {
+            font-size: 6rem;
+        }
+    }
+
+    button {
+        cursor: pointer;
+        font-size: 3.2rem;
+        color: $c-orange;
+        padding: 35px 85px;
+        border: 4px dashed $c-orange;
+        border-radius: 50px;
+        text-transform: uppercase;
+        background-color: transparent;
+
+        @include respond(md) {
+            font-size: 2rem;
+            padding: 20px 60px;
+        }
+    }
+}

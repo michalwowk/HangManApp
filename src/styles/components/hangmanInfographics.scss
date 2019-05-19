@@ -1,0 +1,296 @@
+.hangmanInfographics {
+  transform: translateX(-16px);
+  position: absolute;
+  left: 0;
+
+  @include respond(xl) {
+    left: auto;
+    position: relative;
+    min-height: 320px;
+    width: 100%;
+  }
+
+  &__body {
+    animation: bounce 4s linear infinite;
+    transform-origin: 0 50%;
+  }
+
+  &__item {
+    position: absolute;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+
+    &[data-visible="true"] {
+      opacity: 1;
+    }
+  }
+
+  &__top-bar {
+    width: 250px;
+    height: 30px;
+    background-color: $c-charcoal;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    @include respond(xl) {
+      width: 125px;
+      height: 15px;
+      background-color: $c-charcoal;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  &__bottom-bar {
+    background-color: $c-charcoal;
+    top: 29px;
+    left: 180px;
+    height: 45px;
+    width: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    @include respond(xl) {
+      top: 15px;
+      left: 90px;
+      height: 23px;
+      width: 15px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  &__head {
+    left: 195px;
+    top: 60px;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    @include respond(xl) {
+      left: 98px;
+      top: 30px;
+
+      img {
+        width: 96px;
+        height: 106px;
+      }
+    }
+  }
+
+  &__neck {
+    left: 180px;
+    top: 250px;
+    height: 45px;
+    width: 30px;
+    background-color: $c-beige;
+
+    @include respond(xl) {
+      left: 90px;
+      top: 125px;
+      height: 23px;
+      width: 15px;
+    }
+  }
+
+  &__chest {
+    width: 55px;
+    left: 195px;
+    height: 120px;
+    top: 295px;
+
+    @include respond(xl) {
+      width: 27px;
+      left: 98px;
+      height: 60px;
+      top: 148px;
+    }
+
+    &--left {
+      transform: translateX(-100%);
+      background-color: $c-green-l;
+    }
+
+    &--right {
+      background-color: $c-green;
+    }
+  }
+
+  &__arm {
+    width: 35px;
+    height: 90px;
+    top: 297px;
+    z-index: 2;
+
+    @include respond(xl) {
+      width: 18px;
+      height: 45px;
+      top: 149px;
+    }
+
+    &--left {
+      transform: rotate(35deg);
+      left: 112px;
+      background-color: $c-green-l;
+
+      @include respond(xl) {
+        left: 56px;
+      }
+    }
+
+    &--right {
+      transform: rotate(-35deg);
+      left: 244px;
+      background-color: $c-green;
+
+      @include respond(xl) {
+        left: 122px;
+        ;
+      }
+    }
+
+  }
+
+  &__hand {
+    top: 365px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: $c-beige;
+
+    @include respond(xl) {
+      top: 183px;
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+    }
+
+    &--left {
+      left: 88px;
+
+      @include respond(xl) {
+        left: 44px;
+      }
+    }
+
+    &--right {
+      left: 273px;
+
+      @include respond(xl) {
+        left: 137px;
+      }
+    }
+  }
+
+  &__waist {
+    background-color: $c-navy-l;
+    top: 385px;
+    left: 195px;
+    width: 110px;
+    height: 60px;
+    transform: translateX(-50%);
+
+    @include respond(xl) {
+      top: 192px;
+      left: 98px;
+      width: 54px;
+      height: 30px;
+    }
+  }
+
+  &__leg {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 50px;
+    height: 170px;
+    top: 435px;
+    z-index: 2;
+    background-color: $c-navy-l;
+
+    @include respond(xl) {
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      width: 25px;
+      height: 85px;
+      top: 218px;
+    }
+
+    &--left {
+      transform: rotate(15deg);
+      left: 118px;
+
+      @include respond(xl) {
+        left: 61px;
+      }
+    }
+
+    &--right {
+      transform: rotate(-15deg);
+      left: 222px;
+
+      @include respond(xl) {
+        left: 110px;
+      }
+    }
+  }
+
+  &__foot {
+    background-color: $c-beige;
+    height: 28px;
+    width: 80px;
+    top: 580px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    @include respond(xl) {
+      height: 15px;
+      width: 40px;
+      top: 290px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &--left {
+      transform: rotate(15deg);
+      border-top-left-radius: 10px;
+      left: 60px;
+
+      @include respond(xl) {
+        border-top-left-radius: 5px;
+        left: 30px;
+      }
+    }
+
+    &--right {
+      transform: rotate(-15deg);
+      border-top-right-radius: 10px;
+      left: 250px;
+
+      @include respond(xl) {
+        border-top-right-radius: 5px;
+        left: 125px;
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: skew(0deg);
+  }
+
+  25% {
+    transform: skew(3deg);
+  }
+
+  50% {
+    transform: skew(0deg);
+  }
+
+  75% {
+    transform: skew(-3deg);
+  }
+
+  to {
+    transform: skew(0deg);
+  }
+}

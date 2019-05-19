@@ -1,0 +1,51 @@
+.wrongLetters {
+  width: 50%;
+
+  @include respond(xl) {
+    width: auto;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 3rem;
+
+    @include respond(xl) {
+      font-size: 2rem;
+    }
+
+    @include respond(md) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__list {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respond(md) {
+      margin-top: 15px;
+    }
+  }
+
+  &__item {
+    color: $c-blue;
+    font-size: 9rem;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    @include respond(xl) {
+      font-size: 5rem;
+      margin-right: 15px;
+    }
+
+    text-transform: uppercase;
+
+    @include respond(sm) {
+      font-size: 3rem;
+      margin-right: 10px;
+    }
+  }
+}

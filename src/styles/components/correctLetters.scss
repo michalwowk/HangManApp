@@ -1,0 +1,39 @@
+.correctLetters {
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: calc(100% - 350px);
+
+    @include respond(xl) {
+        width: 100%;
+    }
+
+    &__box {
+        margin: 1%;
+        width: 8%;
+        padding-bottom: 8%;
+        background-color: $c-charcoal;
+        position: relative;
+        border-radius: 8px;
+
+        @include respond(md) {
+            border-radius: 2px;
+        }
+    }
+
+    &__letter {
+        @include absCenter;
+        text-transform: uppercase;
+        color: $c-white;
+        font-size: 7rem;
+
+        @include respond(xl) {
+            font-size: 5rem;
+        }
+
+        @include respond(md) {
+            font-size: 3rem;
+        }
+    }
+}

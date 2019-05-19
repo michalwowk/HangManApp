@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'AllerDisplay', Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: $c-navy;
+    position: relative;
+    padding: 60px;
+    height: 100vh;
+
+    @include respond(md) {
+        padding: 15px;
+    }
+}
+
+.app-container {
+    border-radius: 10px;
+    background-color: $c-gray;
+    padding: 15px;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        width: 50%;
+        padding-bottom: 50%;
+        background-color: $c-blue;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: skewX(-45deg) translateX(100%);
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @include respond(xl) {
+        align-items: flex-start;
+    }
+
+}
